@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Streaming Web App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Live Streaming Web App</h1>
+        <div class="video-container">
+            <video id="localVideo" autoplay muted></video>
+            <div id="browserSource"></div>
+        </div>
+        <div class="controls">
+            <button id="startButton">Start Stream</button>
+            <button id="stopButton">Stop Stream</button>
+            <button id="toggleCameraButton">Toggle Camera</button>
+            <button id="toggleScreenShareButton">Toggle Screen Share</button>
+            <button id="toggleBrowserSourceButton">Toggle Browser Source</button>
+        </div>
+        <div class="settings">
+            <input type="text" id="rtmpUrl" placeholder="RTMP URL">
+            <input type="text" id="browserSourceUrl" placeholder="Browser Source URL">
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
